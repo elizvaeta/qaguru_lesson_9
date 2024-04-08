@@ -6,7 +6,6 @@ from selenium import webdriver
 @pytest.fixture(scope='function', autouse=True)
 def browser_management():
     browser.config.base_url = 'https://demoqa.com'
-    browser.config.timeout = 1.0
 
     driver_options = webdriver.ChromeOptions()
     driver_options.add_argument('--headless')

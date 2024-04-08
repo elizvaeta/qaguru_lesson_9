@@ -14,7 +14,7 @@ def test_success_submit():
      .fill_date_of_birth('1999', 'September', '07')
      .fill_subjects('Maths')
      .fill_hobbies('Music')
-     .fill_upload_picture('../files/test.jpg')
+     .fill_upload_picture('test.jpg')
      .fill_current_address('Russia')
      .fill_state('Haryana')
      .fill_city('Karnal')
