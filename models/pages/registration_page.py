@@ -1,5 +1,6 @@
 import os
 
+from config import FILES_DIR
 from models.user import User, Hobby, Gender
 from selene import browser, by, have
 
@@ -54,8 +55,8 @@ class RegistrationPage:
             browser.element('[for=hobbies-checkbox-3]').click()
         return self
 
-    def fill_upload_picture(self, path):
-        browser.element('#uploadPicture').send_keys(os.path.abspath(path))
+    def fill_upload_picture(self, filename):
+        browser.element('#uploadPicture').send_keys(os.path.join(FILES_DIR, filename))
         return self
 
     def fill_current_address(self, value):
